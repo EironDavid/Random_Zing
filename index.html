@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#fff5f7">
+  <title>For You 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+  <div id="petals-container" aria-hidden="true"></div>
+
+  <header class="page-nav" id="page-nav">
+    <button class="btn-back hidden" id="btn-back" type="button" aria-label="Go back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      <span>Back</span>
+    </button>
+    <div class="step-dots" id="step-dots" aria-label="Progress">
+      <span class="dot active" data-step="1"></span>
+      <span class="dot" data-step="2"></span>
+      <span class="dot" data-step="3"></span>
+    </div>
+  </header>
+
+  <!-- Screen 1 -->
+  <section id="screen-1" class="screen active" data-step="1">
+    <div class="screen-content">
+      <p class="screen-label">A little something for you</p>
+      <div class="envelope-scene" id="envelope-trigger" role="button" tabindex="0" aria-label="Tap to open envelope">
+        <div class="envelope-glow"></div>
+        <img src="assets/envelope.svg" alt="A sealed envelope with a heart" class="envelope-img" id="envelope-img">
+        <div class="letter" aria-hidden="true"><span>💕</span></div>
+      </div>
+      <p class="tap-hint">Tap to Open 💌</p>
+    </div>
+  </section>
+
+  <!-- Screen 2 -->
+  <section id="screen-2" class="screen" data-step="2">
+    <div class="screen-content poem-content">
+      <p class="screen-label">A little note</p>
+      <div class="glass-card poem-card">
+        <div class="card-shimmer" aria-hidden="true"></div>
+        <div class="poem" id="poem">
+          <p class="poem-line">Among the flowers and quiet skies,</p>
+          <p class="poem-line">I found someone who makes me smile.</p>
+          <p class="poem-line">No grand reason, no perfect plan,</p>
+          <p class="poem-line">I simply enjoy every little moment with you.</p>
+          <p class="poem-break" aria-hidden="true"></p>
+          <p class="poem-line">Some people feel like sunshine.</p>
+          <p class="poem-line">You feel like a peaceful afternoon,</p>
+          <p class="poem-line">The kind I never want to end.</p>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="btn-more" type="button">One More Thing 🌸</button>
+    </div>
+  </section>
+
+  <!-- Screen 3 -->
+  <section id="screen-3" class="screen" data-step="3">
+    <div class="screen-content invite-content">
+      <p class="screen-label">One gentle question</p>
+      <div class="cat-frame">
+        <img src="assets/cat-awe.jpg" alt="An adorable cat" class="cat-img">
+      </div>
+      <img src="assets/flower.svg" alt="" class="flower-img" aria-hidden="true">
+      <div class="glass-card invite-card">
+        <div class="card-shimmer" aria-hidden="true"></div>
+        <h1 class="invite-title">Would you like to go out with me sometime? 🌸</h1>
+        <p class="invite-subtitle">No pressure. I just thought it would be nice to spend some time together.</p>
+      </div>
+      <div class="invite-buttons" id="invite-buttons">
+        <button class="btn btn-yes" id="btn-yes" type="button">Yes 🌷</button>
+        <button class="btn btn-no" id="btn-no" type="button">No 🌼</button>
+      </div>
+      <p class="sure-message hidden" id="sure-message">Are you sure? 🥺</p>
+      <div class="celebration hidden" id="celebration">
+        <div class="glass-card celebration-card">
+          <p class="celebration-text">Yay! Looking forward to hanging out with you 🌸❤️</p>
+        </div>
+      </div>
+    </div>
+    <div id="bloom-container" aria-hidden="true"></div>
+    <div id="falling-petals" aria-hidden="true"></div>
+    <div id="hearts-container" aria-hidden="true"></div>
+  </section>
+
+  <!-- Music Player -->
+  <div id="music-player" class="music-player hidden">
+    <div class="player-main">
+      <div class="player-info">
+        <div class="now-playing">
+          <span class="now-playing-label">Now playing</span>
+          <span class="song-title" id="song-title">—</span>
+        </div>
+        <button class="playlist-toggle" id="playlist-toggle" type="button" aria-label="Show playlist">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="progress-row">
+        <span class="time" id="current-time">0:00</span>
+        <div class="progress-wrap">
+          <div class="progress-fill" id="progress-fill"></div>
+          <input type="range" class="progress-bar" id="progress-bar" min="0" max="100" value="0" aria-label="Seek">
+        </div>
+        <span class="time" id="duration">0:00</span>
+      </div>
+      <div class="controls-row">
+        <button class="ctrl-btn" id="btn-prev" type="button" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6V6zm3.5 6 8.5 6V6l-8.5 6z"/></svg>
+        </button>
+        <button class="ctrl-btn ctrl-play" id="btn-play" type="button" aria-label="Play">
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+          <svg class="icon-pause hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button class="ctrl-btn" id="btn-next" type="button" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2.5-6 8.5 6V6l-8.5 6zM16 6v12h2V6h-2z"/></svg>
+        </button>
+        <div class="volume-wrap">
+          <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="70" aria-label="Volume">
+        </div>
+      </div>
+    </div>
+    <div class="playlist-panel hidden" id="playlist-panel">
+      <p class="playlist-heading">Playlist</p>
+      <ul class="playlist" id="playlist"></ul>
+    </div>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
