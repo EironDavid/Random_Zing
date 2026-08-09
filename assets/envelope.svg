@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" fill="none">
+  <defs>
+    <linearGradient id="envBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f7"/>
+      <stop offset="100%" stop-color="#fce4ec"/>
+    </linearGradient>
+    <linearGradient id="envFlap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8bbd0"/>
+      <stop offset="100%" stop-color="#f48fb1"/>
+    </linearGradient>
+  </defs>
+  <!-- Envelope body -->
+  <rect x="10" y="40" width="180" height="90" rx="4" fill="url(#envBody)" stroke="#e8a0b4" stroke-width="1.5"/>
+  <!-- Inner fold lines -->
+  <path d="M10 40 L100 85 L190 40" stroke="#f0c4d0" stroke-width="1" fill="none"/>
+  <!-- Flap (opens upward) -->
+  <g id="flap">
+    <path d="M10 40 L100 10 L190 40 L100 70 Z" fill="url(#envFlap)" stroke="#e8a0b4" stroke-width="1.5"/>
+  </g>
+  <!-- Heart seal -->
+  <path d="M100 52 C100 52 88 42 82 48 C76 54 82 62 100 72 C118 62 124 54 118 48 C112 42 100 52 100 52Z" fill="#e57373" opacity="0.85"/>
+</svg>
