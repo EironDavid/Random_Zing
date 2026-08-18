@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Cute cat illustration -->
+  <!-- Body -->
+  <ellipse cx="100" cy="130" rx="55" ry="45" fill="#f5e6d3"/>
+  <!-- Head -->
+  <circle cx="100" cy="75" r="50" fill="#f5e6d3"/>
+  <!-- Ears -->
+  <path d="M58 45 L50 15 L75 38 Z" fill="#f5e6d3"/>
+  <path d="M142 45 L150 15 L125 38 Z" fill="#f5e6d3"/>
+  <path d="M62 42 L58 25 L72 38 Z" fill="#ffb7b2"/>
+  <path d="M138 42 L142 25 L128 38 Z" fill="#ffb7b2"/>
+  <!-- Eyes -->
+  <ellipse cx="78" cy="72" rx="10" ry="12" fill="#4a3728"/>
+  <ellipse cx="122" cy="72" rx="10" ry="12" fill="#4a3728"/>
+  <circle cx="81" cy="68" r="4" fill="white"/>
+  <circle cx="125" cy="68" r="4" fill="white"/>
+  <!-- Nose -->
+  <path d="M100 82 L94 88 L106 88 Z" fill="#ffb7b2"/>
+  <!-- Mouth -->
+  <path d="M100 88 Q92 96 85 92" stroke="#c9956c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M100 88 Q108 96 115 92" stroke="#c9956c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="45" y1="78" x2="68" y2="80" stroke="#c9956c" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="88" x2="68" y2="86" stroke="#c9956c" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="132" y1="80" x2="155" y2="78" stroke="#c9956c" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="132" y1="86" x2="158" y2="88" stroke="#c9956c" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Blush -->
+  <ellipse cx="62" cy="88" rx="10" ry="6" fill="#ffb7b2" opacity="0.4"/>
+  <ellipse cx="138" cy="88" rx="10" ry="6" fill="#ffb7b2" opacity="0.4"/>
+  <!-- Paws -->
+  <ellipse cx="65" cy="168" rx="15" ry="10" fill="#f5e6d3"/>
+  <ellipse cx="135" cy="168" rx="15" ry="10" fill="#f5e6d3"/>
+  <!-- Tail -->
+  <path d="M150 125 Q180 100 175 70 Q170 55 160 60" stroke="#f5e6d3" stroke-width="14" fill="none" stroke-linecap="round"/>
+</svg>
